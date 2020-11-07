@@ -18,3 +18,4 @@ http.ajax = function ({ type, url, success, data }) {
     }
     $.ajax(requirData);
 }
+

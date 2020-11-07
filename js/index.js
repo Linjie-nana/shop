@@ -56,3 +56,9 @@ function floordata() {
     })
 }
 floordata()
+
+function search() {
+
+    window.location.href = './search.html';
+
+}
