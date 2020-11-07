@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.css">
+    <script src="./lib/jquery-1.12.4.min.js"></script>
+    <!-- 导入响应式判断 -->
+    <script src="./lib/flexible.js"></script>
+    <!-- 导入插件 -->
+    <script src="./lib/swiper-bundle.js"></script>
+    <!-- 导入模板 -->
+    <script src="./lib/template-web.js"></script>
+
+    <script type='text/html' id='swiperdataLo'>
+      {{each message item }}
+        <div class="swiper-slide"> <a href="{{item.navigator_url}}"><img src="{{item.image_src}}" alt=""></a></div>
+    {{/each}}
+    </script>
+
+    <script type="text/html" id="catitemsLo">
+    {{each message item }}
+        <a href="{{item.navigator_url}}">
+            <img src="{{item.image_src}}" alt="">
+
+        </a>
+    {{/each}}
+    </script>
+
+    <script type="text/html" id="floor">
+        {{each message item }}
+        <div class="product_list">
+            <div class="floor_title">
+                <img src="{{item.floor_title.image_src}}" alt="">
+            </div>
+            <div class="floorItem">
+                <div class="list_left">
+                    <a href="{{item.product_list[0].navigator_url}}"><img src="{{item.product_list[0].image_src}}" alt=""></a>
+                </div>
+                <div class="list_right">
+                    <a href="{{item.product_list[1].navigator_url}}">
+                        <img src="{{item.product_list[1].image_src}}" alt="">
+                    </a>
+                    <a href="{{item.product_list[2].navigator_url}}">
+                        <img src="{{item.product_list[2].image_src}}" alt="">
+                    </a>
+                    <a href="{{item.product_list[3].navigator_url}}">
+                        <img src="{{item.product_list[3].image_src}}" alt="">
+                    </a>
+                    <a href="{{item.product_list[4].navigator_url}}">
+                        <img src="{{item.product_list[4].image_src}}" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+ </script>
+</head>
+
+<body>
+    <header>
+        <div class="header_title">
+            优购
+        </div>
+        <div class="header_search">
+            <input type="text" placeholder="搜索">
+        </div>
+    </header>
+
+    <div class="body">
+        <!-- 轮播 -->
+        <div class="swiperdata">
+            <div class="swiper-container">
+                <div class="swiper-wrapper toSwiperdata">
+                    <!-- 这里导入模板 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 导航 -->
+        <div class="catitems">
+            <!-- 这里导入模板 -->
+        </div>
+
+        <!-- 楼层 -->
+        <div class="floor">
+
+
+            <!-- 楼层插入这里 -->
+        </div>
+    </div>
+
+    <footer>
+
+        <a href=""> <img src="./images/index.png" alt="">首页</a>
+        <a href=""> <img src="./images/category.png" alt="">分类</a>
+        <a href=""> <img src="./images/cart.png" alt=""> 购物车</a>
+        <a href=""> <img src="./images/user.png" alt="">我的</a>
+
+    </footer>
+
+    <script src="./js/http.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
