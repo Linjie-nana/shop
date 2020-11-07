@@ -34,7 +34,10 @@ function catitems() {
             const renderResult = template('catitemsLo', res);
             console.log(renderResult)
             $('.catitems').html(renderResult);
+            //  转跳
+            $('.catitems a')[0].href = './categories.html'
         }
+
     })
 }
 catitems()
