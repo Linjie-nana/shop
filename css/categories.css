@@ -1,0 +1,55 @@
+.body {
+  box-sizing: content-box;
+  overflow: hidden;
+  background-color: #ffffff;
+  font-size: 0.24rem;
+}
+.body .list_left {
+  background: #f3f3f3;
+  width: 2.42666667rem;
+  float: left;
+}
+.body .list_left .list_item {
+  width: 100%;
+  height: 0.53333333rem;
+  margin: 0.22666667rem 0;
+  text-align: center;
+  list-style: 0.57333333rem;
+  color: #585858;
+  font-weight: 700;
+}
+.body .list_left .current {
+  border-left: 0.04rem solid #EA4350;
+  color: #EA4350;
+}
+.body .list_right {
+  width: 7.57333333rem;
+  float: left;
+}
+.body .list_right .title {
+  height: 0.66666667rem;
+  line-height: 0.66666667rem;
+  width: 100%;
+  color: #575757;
+  font-weight: 700;
+  text-align: center;
+}
+.body .list_right .body {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.body .list_right .body .product {
+  margin-bottom: 0.4rem;
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.24rem;
+}
+.body .list_right .body .product img {
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0 auto;
+}
