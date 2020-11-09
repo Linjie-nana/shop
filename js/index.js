@@ -1,13 +1,3 @@
-var mySwiper = new Swiper('.swiper-container', {
-    freeMode: false,
-    autoplay: true,
-    loop: true,
-    effect: 'fade',
-    fade: {
-        crossFade: false,
-    }
-})
-
 
 function swiperdataLoad() {
     http.ajax({
@@ -18,6 +8,18 @@ function swiperdataLoad() {
             const renderResult = template('swiperdataLo', res);
             console.log(renderResult)
             $('.toSwiperdata').html(renderResult);
+
+
+            //修复插件bug，要线静态渲染然后再进行初始化
+            var mySwiper = new Swiper('.swiper-container', {
+                freeMode: false,
+                autoplay: true,
+                loop: true,
+                effect: 'fade',
+                fade: {
+                    crossFade: false,
+                }
+            })
         }
     })
 }
